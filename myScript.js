@@ -78,5 +78,4 @@ function sCore(result){
   }
 
 }
-
 // Use game(rounds) to play the game replace rounds with a number of games to play

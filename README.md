@@ -1,1 +1,1 @@
-This just a Basic file for this Trial of Uploading to git
+This is a Rock Paper Scissors Project using HTML, CSS, and Javascript.

@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
 
-  <title>TicTacToe</title>
-  <meta name="description" content="TicTacToe app">
+  <title>RockPaperScissors</title>
+  <meta name="description" content="Rock Paper Scissors app">
   <meta name="author" content="Andrew">
 
   <link rel="stylesheet" href="style.css">
@@ -13,6 +13,28 @@
 </head>
 
 <body>
+  <h1>Rock Paper Scissors</h1>
+  <h2>Score</h2>
+  <div id='scoreboard'>
+    <p id='challengers'>Player Computer</p>
+    <p id='playerscore'>0</p>
+    <p id='computerscore'>0</p>
+  </div>
+    <div id='boards'>
+    <div id='playerboard'>
+      <img id='prock' src="./Images/rock.png" alt="rock">
+      <img id='ppaper' src="./Images/paper.png" alt="paper">
+      <img id='pscissors' src="./Images/scissors.png" alt="scissors">
+    </div>
+    <div id='computerboard'>
+      <img id='crock' src="./Images/rock.png" alt="rock">
+      <img id='cpaper' src="./Images/paper.png" alt="paper">
+      <img id='cscissors' src="./Images/scissors.png" alt="scissors">
+    </div>
+    <div id='gamewords'>
+      <p id ='words'>Lets Play</p>
+    </div>
+  </div>
   <script src="myScript.js"></script>
 </body>
 </html>

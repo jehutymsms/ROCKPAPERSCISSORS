@@ -78,3 +78,17 @@ img:hover{
     100% { transform: scale(1); }
     }
 
+.cplayed {
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+.pplayed {
+    background-color: rgb(0, 162, 255);
+    border-radius: 10px;
+}
+
+#reset {
+    color: black;
+    font-size: 40px;
+}

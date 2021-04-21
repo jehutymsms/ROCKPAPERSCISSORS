@@ -1,9 +1,33 @@
+//
+// vairiables for computer Images 
+let cck = document.getElementById("crock");
+let cper = document.getElementById("cpaper");
+let cissor = document.getElementById("cscissors");
+
+// function to hightlight computer selection and deselect
+// previous selection
+
+function chighlight(x){
+  let image = [cck, cper, cissor];
+  for (i=0; i< image.length; i++ ) {
+    image[i].classList.remove("cplayed");
+  }
+  if (x == "r"){
+    return cck.classList.add("cplayed")
+  }else if(x == "p"){
+    return cper.classList.add("cplayed")
+  }else{
+    return cissor.classList.add("cplayed")
+  }
+}
+
 // returns computer random selction of Rock, Paper, Scissors
 function computerPlay(){
   array = ["r","p","s"];
-  return array[Math.floor(Math.random() * array.length)];
+  let answer = array[Math.floor(Math.random() * array.length)];
+  chighlight(answer);
+  return answer;
 }
-
 
 // Make Program to play 1 round of Rock, Paper, Scissor
 // computerSelection as input
@@ -108,26 +132,66 @@ function winner(x){
   }
 }
 
-// Makes Images clickable and runs game
+// vairiables for player Images 
 let rck = document.getElementById("prock");
 let pper = document.getElementById("ppaper");
 let sissor = document.getElementById("pscissors");
 
+// function to hightlight selection and remove hightlight from players
+// previous selection
+function phighlight(x){
+  let image = [rck, pper, sissor];
+  for (i=0; i< image.length; i++ ) {
+    image[i].classList.remove("pplayed");
+  }
+  return x.classList.add("pplayed")
+}
+
 rck.onclick = function(){
   let outcome = playRound(computerPlay(), "r");
+  phighlight(rck);
   sCore(outcome);
   winner(outcome);
 }
 
 pper.onclick = function(){
   let outcome = playRound(computerPlay(), "p");
+  phighlight(pper);
   sCore(outcome);
   winner(outcome);
 }
 
 sissor.onclick = function(){
   let outcome = playRound(computerPlay(), "s");
+  phighlight(sissor);
   sCore(outcome);
   winner(outcome);
 }
 
+//variable for reset button
+let reset = document.getElementById("reset");
+
+//Functions to reset game
+
+
+reset.onclick = function(){
+  scorereset()
+}
+
+// resets score
+function scorereset(){
+  computerScore = 0;
+  playerScore = 0;
+  document.getElementById("computerscore").innerHTML = computerScore;
+  document.getElementById("playerscore").innerHTML = playerScore;
+}
+
+// // removes hightlights
+// function removeAllHightlight(){
+
+// }
+// // resets game words to previous
+
+// function(x){
+
+// }

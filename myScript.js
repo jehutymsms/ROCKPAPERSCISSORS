@@ -176,6 +176,8 @@ let reset = document.getElementById("reset");
 
 reset.onclick = function(){
   scorereset()
+  removeAllHightlight()
+  wordReset()
 }
 
 // resets score
@@ -187,11 +189,18 @@ function scorereset(){
 }
 
 // // removes hightlights
-// function removeAllHightlight(){
 
-// }
+function removeAllHightlight(){
+    let image = [rck, pper, sissor, cck, cper, cissor];
+    for (i=0; i< image.length; i++ ) {
+      image[i].classList.remove("pplayed");
+      image[i].classList.remove("cplayed");
+    }
+}
+
+
 // // resets game words to previous
 
-// function(x){
-
-// }
+function wordReset(){
+  document.getElementById("words").innerHTML = "Lets Play";
+}
